@@ -11,6 +11,7 @@ export class AuthController {
   @Post('login')
   async login(@Request() req) {
     return {
+      success: true,
       token: await this.authService.login(req.user),
       empresa: req.user.ce,
       adm_empresa: req.user.adm,
