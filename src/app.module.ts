@@ -11,7 +11,6 @@ dotenv.config();
 
 @Module({
   imports: [
-    // Configuração do TypeORM para conectar com o banco de dados MySQL
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'mysql.celebreprojetos.com.br',
@@ -20,7 +19,7 @@ dotenv.config();
       password: '585103Aa',  
       database: 'celebreprojeto03',  
       entities: [User],  
-      synchronize: true,  
+      synchronize: false,  
     }),
     AuthModule,
   ],
