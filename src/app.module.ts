@@ -4,6 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { User } from './auth/user.entity'; 
+import { CompanyService } from './company/company.service';
+import { CompanyModule } from './company/company.module';
 
 import * as dotenv from 'dotenv';
 
@@ -22,8 +24,9 @@ dotenv.config();
       synchronize: false,  
     }),
     AuthModule,
+    CompanyModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, CompanyService],
 })
 export class AppModule {}
