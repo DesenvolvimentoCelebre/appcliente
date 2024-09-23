@@ -3,7 +3,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
-import { User } from './auth/user.entity'; 
 import { CompanyService } from './company/company.service';
 import { CompanyModule } from './company/company.module';
 
@@ -21,12 +20,12 @@ dotenv.config();
       password: '585103Aa',  
       database: 'celebreprojeto03',  
       entities: [__dirname + '/**/*.entity{.ts,.js}'],  
-      synchronize: true,  
+      synchronize: false,  
     }),
     AuthModule,
     CompanyModule,
   ],
   controllers: [AppController],
-  providers: [AppService, CompanyService],
+  providers: [AppService],
 })
 export class AppModule {}
