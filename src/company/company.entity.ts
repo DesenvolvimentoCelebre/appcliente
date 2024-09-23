@@ -1,4 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn} from "typeorm";
+import { Exclude } from "class-transformer";
 
 @Entity('empresa')
 export class Company {
@@ -20,6 +21,7 @@ export class Company {
     @Column()
     matriz: string;
     
+    @Exclude()
     @Column()
     ce: number
 }
