@@ -25,3 +25,26 @@ export class Company {
     @Column()
     ce: number
 }
+
+@Entity('usuario')
+export class ContactCompany {
+    
+    @PrimaryGeneratedColumn()
+    id: number
+    
+    @Column()
+    nome: string
+
+    @Column()
+    ddd: number
+
+    @Column()
+    tel: number
+    
+    @Column()
+    email: string
+
+    @Exclude()
+    @Column()
+    ce: number
+}

@@ -28,4 +28,13 @@ export class AuthService {
   async register(userData: Partial<User>): Promise<User> {
     return this.usersService.create(userData);
   }
+
+  validateToken(token: string): boolean {
+    try {
+        const payload = this.jwtService.verify(token); 
+        return !!payload; 
+    } catch (e) {
+        return false; 
+    }
+}
 }

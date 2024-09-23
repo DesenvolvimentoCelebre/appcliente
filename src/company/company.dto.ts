@@ -1,7 +1,7 @@
 import { Exclude, Expose } from 'class-transformer';
 
 export class CompanyDto {
-    @Expose()
+    @Exclude()
     id: number;
 
     @Expose()
@@ -21,4 +21,24 @@ export class CompanyDto {
 
     @Exclude()
     ce: number;
+}
+
+export class ContactCompanyDto {
+    @Exclude()
+    id: number
+
+    @Expose()
+    nome: string
+
+    @Expose()
+    ddd: number
+
+    @Expose()
+    tel: number
+    
+    @Expose()
+    email: string
+
+    @Exclude()
+    ce: number
 }
