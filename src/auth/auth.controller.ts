@@ -15,7 +15,8 @@ export class AuthController {
       token: await this.authService.login(req.user),
       empresa: req.user.ce,
       adm_empresa: req.user.adm,
-      adm_sistema: req.user.bit
+      adm_sistema: req.user.bit,
+      usuario: req.user.usuario
     };
   }
 
