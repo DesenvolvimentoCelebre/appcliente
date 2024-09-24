@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { CompanyModule } from './company/company.module';
 import { SupportModule } from './support/support.module';
+import { WebhookModule } from './webhook/webhook.module';
 
 import * as dotenv from 'dotenv';
 
@@ -23,6 +24,7 @@ dotenv.config();
     AuthModule,
     CompanyModule,
     SupportModule,
+    WebhookModule,
   ],
   controllers: [],
   providers: [],
