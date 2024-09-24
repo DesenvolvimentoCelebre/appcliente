@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { CompanyModule } from './company/company.module';
+import { SupportModule } from './support/support.module';
 
 import * as dotenv from 'dotenv';
 
@@ -21,6 +22,7 @@ dotenv.config();
     }),
     AuthModule,
     CompanyModule,
+    SupportModule,
   ],
   controllers: [],
   providers: [],
