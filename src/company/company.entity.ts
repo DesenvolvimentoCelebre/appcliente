@@ -1,5 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn} from "typeorm";
 import { Exclude } from "class-transformer";
+import { format } from 'date-fns';
 
 @Entity('empresa')
 export class Company {
@@ -30,6 +31,10 @@ export class Company {
 
     @Column()
     estado: string
+    
+    @Column()
+    muni: string
+    
 
     @Column()
     version: string
