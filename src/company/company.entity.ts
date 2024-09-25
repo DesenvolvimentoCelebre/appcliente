@@ -25,7 +25,7 @@ export class Company {
     @Column()
     ce: number
 
-    @Column()
+    @Column({ type: 'date'})
     license: string
 
     @Column()
