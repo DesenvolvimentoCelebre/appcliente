@@ -29,6 +29,9 @@ export class CompanyDto {
     estado: string
 
     @Expose()
+    muni: string
+
+    @Expose()
     version: string
 }
 
