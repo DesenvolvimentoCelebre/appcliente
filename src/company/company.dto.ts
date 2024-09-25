@@ -21,6 +21,15 @@ export class CompanyDto {
 
     @Exclude()
     ce: number;
+
+    @Expose()
+    license: string
+
+    @Expose()
+    estado: string
+
+    @Expose()
+    version: string
 }
 
 export class ContactCompanyDto {

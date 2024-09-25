@@ -24,6 +24,15 @@ export class Company {
     @Exclude()
     @Column()
     ce: number
+
+    @Column()
+    license: string
+
+    @Column()
+    estado: string
+
+    @Column()
+    version: string
 }
 
 @Entity('usuario')
