@@ -18,6 +18,5 @@ export class WebhookService {
     });
 
     await this.notificationRepository.save(notification);
-    console.log('Notification saved:', notification);
   }
 }

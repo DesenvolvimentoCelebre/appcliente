@@ -47,8 +47,7 @@ export class CompanyPayService {
         }
 
         const invoices = await this.companypayRepository.find({
-            where: {cec: id},
-            select: ['venc', 'pag']
+            where: {ce: id}
         });
     
         return {
@@ -57,7 +56,12 @@ export class CompanyPayService {
             cep: companies.cep,
             fatura: invoices.map(f => ({
                 vencimento: f.venc,
-                valor: companies.v_plano
+                valor: companies.v_plano,
+                mes_referencia: f.ref,
+                qrcode: f.qrcode,
+                pix: f.cec,
+                pago: f.bit,
+                data_pagamento: f.pag || 'Pendente'
             }))
         };
     }

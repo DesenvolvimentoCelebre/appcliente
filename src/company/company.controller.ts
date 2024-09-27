@@ -27,6 +27,7 @@ export class ContactCompanyController {
 }
 
 @Controller('company/invoices')
+@UseGuards(JwtAuthGuard)
 export class CompaniesWithInvoicesController {
     constructor(private readonly companypayService: CompanyPayService) {}
 

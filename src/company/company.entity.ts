@@ -84,6 +84,9 @@ export class CompanyPay {
     cec: number
     
     @Column()
+    ce: number
+    
+    @Column()
     bit: number
     
 }
