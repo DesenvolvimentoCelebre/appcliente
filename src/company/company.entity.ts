@@ -62,3 +62,28 @@ export class ContactCompany {
     @Column()
     ce: number
 }
+
+@Entity('company_pay')
+export class CompanyPay {
+    @PrimaryGeneratedColumn()
+    id: number
+
+    @Column({ type: 'date'})
+    ref: string;
+
+    @Column()
+    qrcode: string;
+    
+    @Column({ type: 'date'})
+    venc: string;
+
+    @Column({ type: 'date'})
+    pag: string;
+
+    @Column()
+    cec: number
+    
+    @Column()
+    bit: number
+    
+}
