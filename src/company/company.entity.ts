@@ -33,6 +33,9 @@ export class Company {
     license: string
 
     @Column()
+    createdAt: Date;
+
+    @Column()
     estado: string
     
     @Column()
