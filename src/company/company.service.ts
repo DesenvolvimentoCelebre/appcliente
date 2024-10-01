@@ -15,11 +15,11 @@ export class CompanyService {
 
     async findByCe(ce: number): Promise<CompanyDto[]> {
         const companies = await this.companyRepository.find({ where: { ce }});
-        const companiesWithFormattedDate = companies.map(company => ({
-            ...company,
-            license: new Date(company.license) // Converte para Date
+        const companiesWithFormattedDate = companies.map(Company => ({
+            ...Company,
+            license: new Date(Company.license)
         }));
-
+        console.log()
         return plainToInstance(CompanyDto, companiesWithFormattedDate, { excludeExtraneousValues: true });
     }
 }
