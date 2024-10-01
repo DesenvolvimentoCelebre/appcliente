@@ -25,7 +25,7 @@ export class CompanyDto {
     @Exclude()
     ce: number;
 
-    @Expose()
+    @Expose({ name: 'Licensa'})
     license: string
 
     @Expose()
