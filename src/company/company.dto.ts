@@ -26,16 +26,13 @@ export class CompanyDto {
     ce: number;
 
     @Expose()
-    license: string
-
-    @Expose()
-    createdAt: Date; // ou string, dependendo do tipo
+    license: Date;
 
     @Expose({ name: 'formattedDate' }) // Nome que você quer usar na saída
     getFormattedDate(): string {
-        const day = String(this.createdAt.getDate()).padStart(2, '0');
-        const month = String(this.createdAt.getMonth() + 1).padStart(2, '0'); // Mês começa em 0
-        const year = this.createdAt.getFullYear();
+        const day = String(this.license.getDate()).padStart(2, '0');
+        const month = String(this.license.getMonth() + 1).padStart(2, '0'); // Mês começa em 0
+        const year = this.license.getFullYear();
         return `${day}/${month}/${year}`;
     }
 

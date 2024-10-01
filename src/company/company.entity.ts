@@ -30,7 +30,7 @@ export class Company {
     ce: number
 
     @Column({ type: 'date'})
-    license: string
+    license: Date
 
     @Column()
     estado: string
