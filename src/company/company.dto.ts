@@ -5,6 +5,9 @@ export class CompanyDto {
     id: number;
 
     @Expose()
+    bairro: string 
+
+    @Expose()
     razao_social: string;
 
     @Expose()
