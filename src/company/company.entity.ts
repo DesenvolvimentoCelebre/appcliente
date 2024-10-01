@@ -8,6 +8,9 @@ export class Company {
     id: number;
 
     @Column()
+    bairro: string;
+    
+    @Column()
     razao_social: string;
 
     @Column()
