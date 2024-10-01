@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Company, ContactCompany, CompanyPay } from './company.entity';
 import { CompanyDto, ContactCompanyDto } from './company.dto';
-import { plainToClass } from 'class-transformer';
+import { plainToInstance } from 'class-transformer';
 
 
 @Injectable()
@@ -15,7 +15,9 @@ export class CompanyService {
 
     async findByCe(ce: number): Promise<CompanyDto[]> {
         const companies = await this.companyRepository.find({ where: { ce }});
-        return plainToClass(CompanyDto, companies, { excludeExtraneousValues: true });
+
+
+        return plainToInstance(CompanyDto, companies, { excludeExtraneousValues: true });
     }
 }
 
@@ -27,7 +29,7 @@ export class ContactCompanyService {
 
     async findByCe(ce: number): Promise<ContactCompanyDto[]> {
         const Contactcompanies = await this.ContactcompanyRepository.find({ where: { ce }});
-        return plainToClass(ContactCompanyDto, Contactcompanies, { excludeExtraneousValues: true });
+        return plainToInstance(ContactCompanyDto, Contactcompanies, { excludeExtraneousValues: true });
     }
 }
 
