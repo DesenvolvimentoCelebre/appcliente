@@ -29,7 +29,7 @@ export class Company {
     @Column()
     ce: number
 
-    @Column({ type: 'date'})
+    @Column()
     license: Date
 
     @Column()
